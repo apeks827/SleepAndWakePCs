@@ -2,6 +2,11 @@ import logging
 import winreg
 import subprocess
 
+exclude = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+subprocess.run('ipconfig /flushdns', shell=True)
+
+
 def regedit(name):
     try:
         root = winreg.ConnectRegistry(name, winreg.HKEY_LOCAL_MACHINE)
